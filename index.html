@@ -22,6 +22,29 @@
 			box-sizing: border-box; /* Include padding in the element's width and height */
 			display: block; /* Ensure container is block-level in print */
 		}
+		
+		.responsive-flex {
+			display: flex; /* Makes the sections align side-by-side */
+			flex-wrap: wrap; /* Allows the sections to go to the next row on small screens */
+			justify-content: space-between; /* Adds space between items */
+			gap: 10px; /* Adds some space between the sections */
+		}
+
+		.form-section {
+			flex: 1 1 calc(100% - 20px); /* Ensures each section resizes nicely */
+			margin: 10px 0; /* Adds spacing between sections */
+		}
+
+		@media (max-width: 768px) { /* For small screens */
+			.responsive-flex {
+				flex-direction: column; /* Stacks sections vertically on narrow screens */
+			}
+
+			.form-section {
+				margin: 10px 0; /* Adds space when stacked vertically */
+			}
+		}
+
 		.branding {
             text-align: center;
             margin-bottom: 20px;
@@ -518,7 +541,7 @@
 
 		<h3>Under Masters</h3>
     <p class="role-description">The Under Masters oversee specific branches or operational units within the guild.</p>
-    <div style="display: flex; justify-content: space-between;">
+    <div class="responsive-flex">
         <div class="form-section" style="flex: 1; margin-right: 10px;">
             <h4>1st Under Master</h4>
             <div class="inline-fields">
@@ -578,7 +601,7 @@
 	
 <h3>Lieutenants</h3>
 <p class="role-description">The Lieutenants oversee masters or smaller operational units within the guild.</p>
-<div style="display: flex; justify-content: space-between;">
+<div class="responsive-flex">
     <div class="form-section" style="flex: 1; margin-right: 10px;">
         <h4>1st Lieutenant</h4>
         <div class="inline-fields">
@@ -634,7 +657,7 @@
         <textarea id="lieutenant2Motivations" name="lieutenant2Motivations" rows="3"></textarea>
     </div>
 </div>
-<div style="display: flex; justify-content: space-between;">
+<div class="responsive-flex">
     <div class="form-section" style="flex: 1; margin-right: 10px;">
         <h4>3rd Lieutenant</h4>
         <div class="inline-fields">
@@ -693,7 +716,7 @@
 
         <h3>Masters</h3>
 
-<div style="display: flex; justify-content: space-between;">
+<div class="responsive-flex">
     <div class="form-section" style="flex: 1; margin-right: 10px;">
         <h4>Master Assassin</h4>
 		<p class="role-description">Identifies and approves ASSASSINATION contracts.</p>
@@ -753,7 +776,7 @@
     </div>
 </div>
 
-<div style="display: flex; justify-content: space-between;">
+<div class="responsive-flex">
     <div class="form-section" style="flex: 1; margin-right: 10px;">
         <h4>Master Fencer</h4>
 		<p class="role-description">Tracks supply and demand within the guild. In charge of SMUGGLING jobs.</p>
@@ -812,7 +835,7 @@
     </div>
 </div>
 
-<div style="display: flex; justify-content: space-between;">
+<div class="responsive-flex">
     <div class="form-section" style="flex: 1; margin-right: 10px;">
         <h4>Master of Veils</h4>
 		<p class="role-description">Responsible for hiding the guild's presence. In charge of GAMBLING, EXPEDITIONS, FRAUD, and FRONTS.</p>
@@ -871,7 +894,7 @@
     </div>
 </div>
 
-<div style="display: flex; justify-content: space-between;">
+<div class="responsive-flex">
     <div class="form-section" style="flex: 1; margin-right: 10px;">
         <h4>Master Thief</h4>
 		<p class="role-description">Locates valuable or vulnerable targets. In charge of BURGLARY, LARCENY, and PICKPOCKETING jobs.</p>
@@ -930,7 +953,7 @@
     </div>
 </div>
 
-<div style="display: flex; justify-content: space-between;">
+<div class="responsive-flex">
     <div class="form-section" style="flex: 1; margin-right: 10px;">
         <h4>Spymaster</h4>
 		<p class="role-description">Acquires information pertinent to the guild. In charge of IMPERSONATION, BLACKMAIL, and FORGERY jobs.</p>
@@ -991,7 +1014,7 @@
 
 		
 <h3>Recruitment</h3>
-<div style="display: flex; justify-content: space-between;">
+<div class="responsive-flex">
     <div class="form-section" style="flex: 1; margin-right: 10px;">
         <h4>Conductor (Wetnurse)</h4>
 		<p class="role-description">Oversees new recruits, training, and discipline until they become members.</p>
